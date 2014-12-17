@@ -1,0 +1,13 @@
+name: moving_avg
+
+workers: 2
+
+topology:
+
+    - spout:
+        name: bids-generator
+        module: moving_avg.bids_generator
+
+    -bolt:
+        name: moving-avg-calculator
+        module: moving_avg.moving_avg_calculator
